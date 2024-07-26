@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Survey</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <h1 id="title">Customer Survey Form</h1>
+    <p id="description">We appreciate your opinion.</p>
+
+    <form id="survey-form">
+      <fieldset>
+        <label id="name-label" for="name">Enter your name
+          <input class="text-thing" type="text" id="name" name="name" placeholder="Write your name" required>
+        </label>
+        <label id="email-label" for="email">Enter your email
+          <input class="text-thing" type="email" id="email" name="email" placeholder="Write your email" required>
+        </label>
+        <label id="number-label" form="number">Enter your age
+          <input class="text-thing" type="number" id="number" name="number" min="13" max="120" placeholder="Enter your age" required>
+        </label>
+      </fieldset>
+      
+      <label class="product">Which product did you buy? (required)
+        <select id="dropdown" required>
+          <option>(select one)</option>
+          <option>Amazon gift card</option>
+          <option>Spotify Premium gift card</option>
+          <option>Steam gift card</option>
+        </select>
+      </label>
+
+      <fieldset>
+        <legend>Were you satisfied with your purchase? (required)</legend>
+        <label class="radio-op" for="yes-option">
+          <input value="yes" type="radio" id="yes-option" name="options" required checked>Yes
+        </label>
+        <label class="radio-op" for="no-option">
+          <input value="no" type="radio" id="no-option" name="options" required>No
+        </label>
+      </fieldset>
+      <fieldset class="prueba">
+        <legend>If you had any problems check the corresponding boxes (not required)
+        </legend>
+      <div class="checkbox-container">
+        <div class="checkbox-item">
+          <input id="option-1" type="checkbox" value="1">
+          <label for="option-1">It was never delivered</label>
+        </div>
+        <div class="checkbox-item">
+          <input id="option-2" type="checkbox" value="2">
+          <label for="option-2" class="problems">The word "error" appeared</label>
+        </div>
+        <div class="checkbox-item">
+          <input id="option-3" type="checkbox" value="3">
+          <label for="option-3" class="problems">Other</label>
+        </div>
+      </div>
+      </fieldset>
+      
+      <fieldset>
+        <label for="text-area" class="comments">Leave additional comments (not required)
+          <textarea id="text-area" placeholder="I think..."></textarea>
+        </label>
+      </fieldset>
+
+      <input type="submit" id="submit" value="Submit">
+
+    </form>
+
+  </body>
+</html>
